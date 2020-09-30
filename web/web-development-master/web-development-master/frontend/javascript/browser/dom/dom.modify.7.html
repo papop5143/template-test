@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let div = document.createElement('div');
+        div.className = "alert alert-success";
+        div.innerHTML = "<strong>nan</strong> I LOVE YOU.";
+
+        document.body.append(div);
+        setTimeout(() => div.remove(), 5000);
+        // or setTimeout(() => document.body.removeChild(div), 1000);
+    </script>
+</body>
+
+</html>

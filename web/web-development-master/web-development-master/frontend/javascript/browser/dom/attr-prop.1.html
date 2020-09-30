@@ -1,0 +1,21 @@
+<html lang="en">
+    <style>
+        body.dd{
+            background-color: dimgrey;
+        }
+    </style>
+
+<body class='dd' id="test" something="non-standard">
+    <input id="input" type="text">
+    <script>
+        alert(document.body.id); // test
+        // non-standard attribute does not yield a property
+        alert(document.body.something); // undefined
+
+        // input
+        alert(input.type); // text
+        alert(body.dd); // undefined: DOM property not created, because it's non-standard
+    </script>
+</body>
+
+</html>
